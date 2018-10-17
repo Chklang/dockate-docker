@@ -1,7 +1,7 @@
 FROM node:8-alpine
 WORKDIR /dockate
 RUN (npm install @dockate/core@1.0.6 || 0) && \
-        (npm install dockate-haproxy@1.0.6 || 0) && \
+        (npm install dockate-haproxy@1.0.7 || 0) && \
         echo "#!/bin/sh" > /dockate/run.sh && \
         echo "ERRORS=" >> /dockate/run.sh && \
         echo "if [[ -z \"\$INTERVAL_BETWEEN_CHECK\" ]]; then" >> /dockate/run.sh && \
